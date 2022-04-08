@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>JavaScript Array Sort</h2>
+    <p>The lowest number is <span id="demo"></span> and the highest number is <span id="demo1"></span></p>
+    <p>The Year is <span id="demo2"></span></p>
+
+    <script>
+    const points = [40, 100, 1, 5, 25, 10];
+    points.sort(function(a, b){return a-b});
+    document.getElementById("demo").innerHTML = points[0];
+    document.getElementById("demo1").innerHTML= points[points.length-1]
+    let d= Date.now()
+    document.getElementById('demo2').innerHTML= getYear().d
+    </script>
+
+
+</body>
+</html>

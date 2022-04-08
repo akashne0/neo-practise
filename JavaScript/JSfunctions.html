@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Functions</title>
+
+    <script>
+       function myFunction() {
+            document.getElementById('demo').innerHTML="This is the changed sentence.";
+        }
+
+        function otherFunction(){
+            document.getElementById('demo1').style.color="blue";
+        } 
+
+        function colorFunction(){
+            document.getElementById('demo5').style.color="red";
+        } 
+
+        function aFunction(x, y){
+            return x * y ;
+        }
+
+       
+    </script>
+
+</head>
+<body>
+    
+    <p id='demo'>This is a sentence which should be changed by clicking button.</p>
+    <button type="button" onclick="myFunction()">Click</button>
+
+    <p id='demo1'>This is a sentence whose color can be changed by clicking button.</p>
+    <button type="button" onclick="otherFunction()">Click</button>
+
+    <p id='demo5'>This is a sentence whose color can be changed by hovering over click.</p>
+    <button type="button" onmouseover="colorFunction()">Click</button>
+
+
+
+    <p id='demo2'></p>
+
+    <p id='demo3'></p>
+
+    <p id='demo4'></p>
+
+    <script>
+        let carName = "Volvo";
+            document.getElementById('demo2').innerHTML = carName
+
+        var a = aFunction(2,2);
+        document.getElementById('demo3').innerHTML = a
+
+        const person = {
+            firstName : "Akash",
+            lastName : "Singh" ,
+            age : 26, 
+            id : 7973 ,  
+            fullName : function myFunction() {
+                return this.firstname + this.lastname ;
+             }
+        }
+        document.getElementById('demo4').innerHTML = person.firstName ; 
+    </script>
+    
+</body>
+</html>

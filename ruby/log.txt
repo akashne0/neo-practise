@@ -1,0 +1,4 @@
+# Logfile created on 2022-04-07 10:13:05 +0530 by logger.rb/v1.4.3
+E, [2022-04-07T10:13:05.728390 #26364] ERROR -- : This is an error
+W, [2022-04-07T10:13:05.728447 #26364]  WARN -- : This is warning from server
+F, [2022-04-07T10:13:05.728469 #26364] FATAL -- : This is fatal issue from server

@@ -1,0 +1,2 @@
+Error:undefined method `+' for nil:NilClass at 2022-04-07 10:44:35 +0530
+Error:undefined method `*' for nil:NilClass at 2022-04-07 10:45:13 +0530

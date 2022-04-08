@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #head,#content{
+            color: black;
+            background-color: rgb(241, 177, 99);
+            border: 1px solid rgb(17, 2, 2);
+            text-align: center;
+        }
+        #content{
+            padding: 40px;
+        }
+        #head{
+            color: brown;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <button>Click for Toggle</button>
+    <input type="button" name="button" id="toggle" value="click here (fadeToggle)">
+    <input type="button" name="button" id="fadein" value="click here (fadein)">
+    <input type="button" name="button" id="fadeout" value="click here (fadeout)">
+    <input type="button" name="button" id="fadeto1" value="click here (fadeto)">
+    <input type="button" name="button" id="fadeto2" value="click here (fadeto)">
+    <input type="button" name="button" id="animate" value="click here (animate)">
+    <input type="button" name="button" id="remove" value="click here (remove)">
+    <input type="button" name="button" id="empty" value="click here (emptydiv)">
+
+
+    <p>This is a paragraph we want to toggle on.</p>
+    <p>This paragraph will also be used for toggle function.</p>
+
+    <div id="head">Click this for slide </div>
+    <div id="content">Hello !!</div>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").toggle(3000);
+            });
+            $("#toggle").click(function(){
+                $("p").fadeToggle(1000);
+            });
+            $("#fadein").click(function(){
+                $("p").fadeIn(1000);
+            });
+            $("#fadeout").click(function(){
+                $("p").fadeOut(1000);
+            });
+            $("#fadeto1").click(function(){
+                $("p").fadeTo(1000,0.3);
+            });
+            $("#fadeto2").click(function(){
+                $("p").fadeTo(1000,1);
+            });
+            $("#head").click(function(){
+                $("#content").slideToggle();
+            });
+            $("#animate").click(function(){
+                var div = $("div");
+                div.animate({margin: '+=10px'});
+            });
+            $("#remove").click(function(){
+                $("p").remove();
+            });
+            $("#empty").click(function(){
+                $("div").empty();
+            });
+
+        });
+
+    </script>
+</body>
+</html>
