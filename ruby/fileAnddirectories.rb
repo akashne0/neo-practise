@@ -35,12 +35,6 @@
 "a+" - Like 'a', but allows reading aswell.
 
 
-
-
-
-
-
-
 # File.open("employees.txt", "r") do |file|
 #     # puts file.read()        #To display the file
 #     # puts file.readline()     #To display 1 line at a time
@@ -94,3 +88,61 @@ puts File.identical?(file,csv)
 puts File(file).mtime < File(csv).mtime
 puts File(file).mtime < File(csv).mtime
 puts File(file).mtime == File(csv).mtime
+
+
+#read and write
+File.open("emplyees.txt", "r") do |file|
+    # #  puts file.readlines()[1]
+    
+    # # for line in file.readlines()
+    # # 	puts line
+    # # end
+    
+    
+    # end
+    
+    # File.open("emplyees.txt", "a") do |file|
+    # 	puts file.write("\n Oscar, Accounting")
+    
+    # end
+    
+    File.open("emplyees.txt", "r+") do |file|
+    
+        file.readline()
+        file.write("overridden")
+    end 
+
+#for file  creating and opening 
+file_name =  "other_teams.txt"
+file_path = "ruby/#{file_name}"
+
+# if File.exist?(file_path)
+
+# 	File.open(file_path, "w+"){|f| f.write("Twins","astros","yankees")}
+# end
+
+
+ # file_to_save = File.new("ruby/other_teams.txt", "w+")
+ # file_to_save.puts("A's, Diamond, Mariners ")
+ # file_to_save.close
+
+ #FOR READING A FILE
+
+ teams = File.read(file_path)
+p teams.split(",")
+
+
+print_to_output_stream()
+	puts data.class
+	puts data.length
+	
+#to read csv file
+# require "csv"
+
+# CSV.foreach ("article.csv") do |row|
+# 	puts row.inspect
+# end
+
+
+CSV.read("article.csv")
+

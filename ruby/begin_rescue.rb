@@ -9,8 +9,6 @@
 #     puts e
 # end
 
-
-
 # number = 10
 # array = [0, 5, 4, 0, 5, 10]
 # new_array = Array.new
@@ -63,7 +61,6 @@ end
         #again from the beginning after capturing the exception.
 
 #Example
-# use of retry statement
     begin   
         # using raise to create an exception
         raise 'Exception Created!'
@@ -90,13 +87,10 @@ end
     You can also set a condition statement to raise an exception.
 
 ##Example:
-# Ruby program to illustrate
-# use of raise statement
 
 begin
 		
-	puts 'This is Before Exception Arise!'
-		
+	puts 'This is Before Exception Arise!'	
 	# using raise to create an exception
 	raise 'Exception Created!'
 
